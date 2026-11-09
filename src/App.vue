@@ -1,22 +1,21 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <a class="skip-link" href="#main-content">跳转到主内容</a>
+  <RouterView />
 </template>
 
-<script>
-export default {
-  name: 'app'
+<style scoped>
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 100;
+  padding: 8px 14px;
+  color: #fff;
+  background: #1d4ed8;
+  border-radius: 6px;
 }
-</script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.skip-link:focus {
+  top: 12px;
 }
 </style>
